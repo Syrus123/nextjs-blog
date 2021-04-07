@@ -1,9 +1,9 @@
-import Head from 'next/head'
+import head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/Posts'
 import Link from 'next/link'
-import Date from '../components/Date'
+import Date from '../components/date'
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {
@@ -16,9 +16,9 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
-      <Head>
+      <head>
         <title>{siteTitle}</title>
-      </Head>
+      </head>
       <section className={utilStyles.headingMd}>
         <p>[It is me!Syruss]</p>
         <p>
